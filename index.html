@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="colorTheme.js" defer></script>
+    <script type="text/javascript" src="main.js" defer></script>
+</head>
+<body class="light-mode bright-mode">
+    <div class="toggle" id="toggle">
+        <form>
+            <div class="themeChange">
+                <div class="option-1">
+                    <span class="text">Dark 🌜</span>
+                    <input class="circle1" type="radio" value="dark" name="theme" id="circle1" checked >
+                </div>
+                <div class="option-2">
+                    <span class="text">Light 🌞</span>
+                    <input class="circle2" type="radio" value="light"  name="theme" id="circle2">
+                </div>
+                <div class="option-3">
+                    <span class="text">Bright ⭐</span>
+                    <input class="circle3" type="radio" value="bright" name="theme" id="circle3">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="calculator">
+        <div class="title">
+            <h4> SCIENTIFIC CALCULATOR</h4>
+        </div>
+        <div class="calculator-window">
+        <div class="display">
+            <input class="screen" type="text" placeholder="0" readonly>
+        </div>
+        <div class="plane"></div>
+        </div>
+        
+        
+        <div class="keys">
+            <section class="keys-row">
+                <button class="btn-power" id="btn-on">ON</button>
+                <button class="btn-power" id="btn-off">OFF</button>
+            
+                <button onclick="calcularNegativo()" class="btn-operation">+/-</button>
+                <button class="btn-operation" id="percentage">%</button>
+                <button class="btn-clear">CE</button>
+            </section>
+            <section class="keys-row">
+                <button onclick="calcularFactorial()" class="btn-function" id="factorial">x!</button>
+                <button onclick="calcularSin()" class="btn-function">sin</button>
+                <button onclick="calcularLn()" class="btn-function">ln</button>
+                <button class="btn-number">7</button>
+                <button class="btn-number">8</button>
+                <button class="btn-number">9</button>
+                <button class="btn-operation">÷</button>
+            </section>
+
+            <section class="keys-row">
+                <button class="btn-function">𝜋</button>
+                <button onclick="calcularCos()" class="btn-function">cos</button>
+                <button onclick="calcularLog()" class="btn-function">log</button>
+                <button class="btn-number">4</button>
+                <button class="btn-number">5</button>
+                <button class="btn-number">6</button>
+                <button class="btn-operation">*</button>
+            </section>
+
+            <section class="keys-row">
+                <button class="btn-function">e</button>
+                <button onclick="calcularTan()" class="btn-function">tan</button>
+                <button onclick="calcularRaiz()" class="btn-function">√</button>
+                <button class="btn-number">1</button>
+                <button class="btn-number">2</button>
+                <button class="btn-number">3</button>
+                <button class="btn-operation">-</button>
+            </section>
+
+            <section class="keys-row">
+                <button class="btn-clear">AC</button>
+                <button onclick="calcularExp()" class="btn-function">exp</button>
+                <button class="btn-function" id="pot">x^y</button>
+                <button class="btn-number">0</button>
+                <button class="btn-number">.</button>
+                <button class="btn-equal">=</button>
+                <button class="btn-operation">+</button>
+            </section>
+
+        </div>
+
+    </div>
+</body>
+</html>

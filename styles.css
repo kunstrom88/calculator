@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+
+    /*Dark Theme*/
+    --bg: radial-gradient(50% 30% ellipse at center top, #201e40 0%, #100a1c 100%);
+    --span-text: hsl(60, 100%, 99%);
+    --radio: hsl(133, 93%, 28%);
+    --title: hsl(60, 100%, 99%);
+    --calculator-bg: #20183b;
+    --calculator-bg-shadow: #3f2e71;
+    --screen:hsl(60, 8%, 7%);
+    --window: hsla(244, 63%, 17%, 1);
+    --plane: #3f2e71;
+    --placeholder:hsla(151, 100%, 52%, 1);
+    --screen-text: hsla(151, 100%, 52%, 1);
+    --btn-text: hsl(60, 100%, 99%);
+    --btn-bg-text: linear-gradient(90deg, #1c202c, hsl(228, 11%, 44%));
+    --btn-number: hsla(3, 44%, 62%, 1);
+    --btn-bg-number: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    --btn-operation: hsl(59, 85%, 60%);
+    --btn-bg-operation: linear-gradient(90deg, #ab5b15, #d29855);
+    --btn-bg-option: linear-gradient(90deg, #ac071a, #e06876);
+    --btn-bg-equal: linear-gradient(90deg, #054d87, #6eade1);
+    --btn-hover: hsla(0, 100%, 50%, 0.94);
+    --btn-active: hsla(60, 100%, 50%, 0.94);
+    
+
+    /*Light Theme*/
+    --bg-light: radial-gradient(50% 30% ellipse at center top, #d9e4d1 0%, #c2e1c8 100%);
+    --span-text-light: hsl(60, 8%, 7%);
+    --radio-light: hsl(245, 67%, 67%);
+    --title-light: hsl(60, 8%, 7%);
+    --calculator-bg-light: hsla(224, 51%, 86%, 1);
+    --calculator-bg-shadow-light: hsla(224, 8%, 55%, 1);
+    --screen-light: hsl(69, 24%, 59%);
+    --window-light: hsla(252, 2%, 47%, 1);
+    --plane-light:  hsla(252, 0%, 55%, 1);
+    --placeholder-light:hsl(60, 8%, 7%);
+    --screen-text-light: hsla(151, 100%, 52%, 1);
+    --btn-text-light: hsl(60, 8%, 7%);
+    --btn-bg-text-light: linear-gradient(90deg, #dcdcdc, hsl(0, 0%, 100%));
+    --btn-number-light: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    --btn-bg-number-light: hsla(3, 44%, 62%, 1);
+    --btn-operation-light: hsl(60, 8%, 7%);
+    --btn-bg-operation-light: linear-gradient(90deg, #8ee7a7, #bfe7bc);
+    --btn-bg-option-light: linear-gradient(90deg, #93a155, #919b7f);
+    --btn-bg-equal-light: linear-gradient(90deg, #ebbf6f, #e1dd6e);
+    --btn-hover-light: hsla(0, 100%, 50%, 0.94);
+    --btn-active-light: hsla(224, 44%, 70%, 1);
+    
+
+    /*Bright Theme*/
+    --bg-bright: radial-gradient(50% 30% ellipse at center top, hsl(292, 99%, 45%) 0%, hsl(292, 65%, 77%) 100%);
+    --span-text-bright: hsl(273, 93%, 56%);
+    --radio-bright: hsl(343, 99%, 49%);
+    --title-bright: hsl(101, 98%, 49%);
+    --calculator-bg-bright: hsl(189, 99%, 45%);
+    --calculator-bg-shadow-bright: rgb(68, 104, 195);
+    --screen-bright: hsl(231, 100%, 50%);
+    --window-bright: hsl(122, 100%, 70%);
+    --plane-bright:  hsl(122, 98%, 78%);
+    --placeholder-bright: hsl(0, 0%, 100%);
+    --screen-text-bright: hsl(315, 36%, 32%);
+    --btn-text-bright: hsl(315, 36%, 32%);
+    --btn-bg-text-bright: linear-gradient(90deg, #dcdcdc, hsl(0, 0%, 100%));
+    --btn-number-bright: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    --btn-bg-number-bright: hsla(3, 44%, 62%, 1);
+    --btn-operation-bright: hsl(315, 36%, 32%);
+    --btn-bg-operation-bright: linear-gradient(90deg, #720ff4, #a56af1);
+    --btn-bg-option-bright: linear-gradient(90deg, #d0ff00, #c5e984);
+    --btn-bg-equal-bright: linear-gradient(90deg, #fca400, #fcf87d);
+    --btn-hover-bright: hsla(0, 100%, 50%, 0.94);
+    --btn-active-bright: hsla(224, 44%, 70%, 1); 
+
+/*========== FONTS ==========*/
+--body-text:"Bangers", cursive;
+--body-text2:"Orbitron", sans-serif;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: var(--body-text);
+    font-family: var(--body-text2);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: var(--bg);
+}
+
+input{
+    width: 30%;
+    height: 70px;
+    padding-left: 8px;
+    margin-right: 10px;
+}
+
+input[type="radio"]{
+    accent-color: var(--radio);
+}
+
+.toggle {
+    position: absolute;
+    top: 10px;
+    right: -150px;
+}
+
+.themeChange{
+    display: flex;
+    width: 700px;
+    justify-content: flex-start;
+}
+
+.text{
+    color: var(--span-text);
+    font-size: var(--small-text);
+}
+.option-1{
+    display: flex;
+    align-items: center;
+}
+
+.option-2{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.option-3{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.circle1, .circle2, .circle3{
+    width: 20px;
+    margin-left: 5px;
+}
+
+.calculator {
+    background-color: var(--calculator-bg);
+    margin: auto;
+    box-sizing: border-box;
+    min-height: 400px;
+    width: 320px;
+    padding: 10px;
+    border-radius: 35px 35px 35px 35px;
+    box-shadow: 7px 3px var(--calculator-bg-shadow);
+    position: relative;
+    padding-left:18px;
+}
+
+.calculator-window{
+    background: var(--window);
+    border-radius: 6px;
+    height: 120px;
+    width: 280px;
+    position:relative;
+}
+
+.plane{
+    background: var(--plane);
+    width: 280px;
+    height: 15px;
+    border-radius: 6px;
+    transform: perspective(42px) rotateX(10deg);
+    transform-origin: bottom;
+    border-radius: 6px;
+    position: absolute;
+    margin-top: 100px;
+    z-index: 90;
+}
+.title {
+    color: var(--title);
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.screen {
+    text-align: right;
+    background: var(--screen);
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px #919b7f;
+    height: 117px;
+    width: 280px;
+    box-sizing: border-box;
+    font-size: 25px;
+    border: none;
+    z-index: 100;
+    position:absolute;
+    transform: perspective(120px) rotateX(-10deg);
+    transform-origin: top;
+    padding-right: 10px;
+    color: var(--placeholder)
+}
+
+::placeholder { 
+    color: var(--placeholder); 
+}
+
+.keys {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    margin-top:5px;
+    margin-left: 5px;
+}
+
+.btn-power{
+    height: 35px;
+    width: 74px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--btn-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px 0px;
+    background:var(--btn-bg-option);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 1px rgba(0, 0, 0, 0.4) 
+}
+.btn-power:active{
+    transform: translateY(2px);
+    background: var(--btn-active);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+.btn-power:hover{
+    color: var(--btn-hover);
+}
+
+.btn-number {
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--btn-number);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px 0px;
+    background:var(--btn-bg-number);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 1px rgba(0, 0, 0, 0.4)
+}
+
+.btn-number:active{
+    transform: translateY(2px);
+    background: var(--btn-active);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+.btn-number:hover{
+    color: var(--btn-hover);
+}
+
+.btn-operation{
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    text-align: center;
+    background: var(--btn-bg-operation);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 1px rgba(0, 0, 0, 0.4);
+    color: var(--btn-operation);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px 0px;
+}
+
+.btn-operation:active{
+    transform: translateY(2px);
+    background: var(--btn-active);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+.btn-operation:hover{
+    color: var(--btn);
+}
+
+.btn-clear{
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    text-align: center;
+    background: var(--btn-bg-option); 
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 1px rgba(0, 0, 0, 0.4);
+    color: var(--btn-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px 0px;
+}
+
+.btn-clear:active{
+    transform: translateY(2px);
+    background: var(--btn-active);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+.btn-clear:hover{
+    color: var(--btn-hover);
+}
+.btn-equal{
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    text-align: center;
+    background: var(--btn-bg-equal);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 1px rgba(0, 0, 0, 0.4);
+    color: var(--btn-text-light);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px 0px;
+}
+
+.btn-equal:active{
+    transform: translateY(2px);
+    background: var(--btn-active);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+.btn-equal:hover{
+    color: var(--btn-hover);
+}
+
+.btn-function{
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    text-align: center;
+    background: var(--btn-bg-text);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 1px rgba(0, 0, 0, 0.4);
+    color: var(--btn-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px 0px;
+}
+
+.btn-function:active{
+    transform: translateY(2px);
+    background: var(--btn-active);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+}
+
+.btn-function:hover{
+    color: var(--btn-hover);
+}
+
+
